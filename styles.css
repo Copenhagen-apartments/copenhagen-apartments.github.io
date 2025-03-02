@@ -79,7 +79,8 @@ nav {
 
 .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centrer horisontalt */
+    align-items: center; /* Centrer vertikalt */
     padding: 40px 0;
 }
 
@@ -107,3 +108,35 @@ footer {
     font-size: xx-small;
     text-align: right;
 }
+
+.image-strip {
+    display: flex; /* Brug flexbox for at lave en vandret stribe */
+    flex-direction: column; /* Juster billederne til at være i en kolonne */
+    align-items: center; /* Juster billederne horisontalt, hvis du vil have dem centreret */
+    gap: 5px; /* Afstand mellem billeder */
+    padding: 10px;
+}
+
+    .image-strip img {
+        width: 600px; /* Bestem størrelsen på billederne */
+        height: auto; /* Behold billedets proportioner */
+        border-radius: 8px; /* Tilføj evt. afrundede hjørner */
+    }
+
+.image-container {
+    display: flex; /* Brug flexbox til at oprette to kolonner */
+    justify-content: center; /* Centrer kolonnerne horisontalt */
+    gap: 50px; /* Afstand mellem kolonnerne */
+}
+
+.column {
+    display: flex;
+    flex-direction: column; /* Placer billederne vertikalt */
+    gap: 5px; /* Afstand mellem billederne i hver kolonne */
+}
+
+    .column img {
+        width: 300px; /* Bestem størrelsen på billederne */
+        height: 200px; /* Behold billedernes proportioner - så sæt auto*/
+        border-radius: 8px; /* Optional: afrund hjørnerne på billederne */
+    }
