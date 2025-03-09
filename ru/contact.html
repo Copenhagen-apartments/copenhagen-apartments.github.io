@@ -4,6 +4,7 @@
     <title>Уникальные квартиры в Копенгагене</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./../styles.css">
+    <script src="./../script.js"></script>
 </head>
 <body>
     <header>
@@ -23,7 +24,68 @@
 
     <div class="container">
         <div class="content">
-            <p>Контакты</p>
+            <h1>Contact</h1><br />
+        </div>
+        <div class="content">
+            <div>
+                Send an email to: <a href="mailto:nyhavn.31k.copenhagen@gmail.com">nyhavn.31k.copenhagen@gmail.com</a> or use the simple email form generator below.
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <form id="emailForm">
+                <input type="email" id="recipient" placeholder="Recipient email" value="nyhavn.31k.copenhagen@gmail.com" readonly hidden>
+
+                <table>
+                    <tr>
+                        <td>Apartment of interest:</td>
+                        <td>
+                            <select id="subject" name="options" required>
+                                <option value="Query regarding apartment 1">Apartment 1</option>
+                                <option value="Query regarding apartment 2">Apartment 2</option>
+                                <option value="Query regarding any of the apartments">Any of the apartments</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Desired period:</td>
+                        <td>
+                            <input type="date" id="datefrom" name="date from" required>
+                            <input type="date" id="dateto" name="date to" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>How many persons:</td>
+                        <td>
+                            <input type="number" id="persons" name="persons" value="2" min="1" max="4" size="2" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone (optional):</td>
+                        <td>
+                            <input type="tel" id="phone" name="phone" placeholder="+375 12345678"
+                                   pattern="\+[0-9]{1,3} [0-9]{6,12}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Contact person :</td>
+                        <td>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">Message:</td>
+                        <td>
+                            <textarea id="message" rows="5" placeholder="Any other questions or comments please add here..."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="left"><button type="button" onclick="sendEmail()" title="When pressing this your default email client will be started and information added to an  email, that you can send">Send Email</button></td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
 
