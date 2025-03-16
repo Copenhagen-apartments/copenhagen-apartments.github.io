@@ -13,4 +13,4 @@
             } else {
         alert("Please enter a recipient e-mail.");
             }
-    }
+}
