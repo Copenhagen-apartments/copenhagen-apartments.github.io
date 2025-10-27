@@ -128,6 +128,12 @@ footer {
         border-radius: 8px; /* Tilføj evt. afrundede hjørner */
     }
 
+    .image-strip .apartment img  {
+        width: 200px; /* Bestem størrelsen på billederne */
+        height: auto; /* Behold billedets proportioner */
+        border-radius: 8px; /* Tilføj evt. afrundede hjørner */
+    }
+
 .image-container {
     display: flex; /* Brug flexbox til at oprette to kolonner */
     justify-content: center; /* Centrer kolonnerne horisontalt */
@@ -143,5 +149,16 @@ footer {
     .column img {
         width: 300px; /* Bestem størrelsen på billederne */
         height: 200px; /* Behold billedernes proportioner - så sæt auto*/
+        border-radius: 8px; /* Optional: afrund hjørnerne på billederne */
+    }
+.row {
+    display: flex;
+    flex-direction: row; /* Placer billederne horizontalt */
+    gap: 5px; /* Afstand mellem billederne i hver kolonne */
+}
+
+    .row img {
+        width: 100px; /* Bestem størrelsen på billederne */
+        height: 50px; /* Behold billedernes proportioner - så sæt auto*/
         border-radius: 8px; /* Optional: afrund hjørnerne på billederne */
     }
