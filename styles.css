@@ -123,17 +123,17 @@ footer {
 }
 
     .image-strip img {
-        width: 600px; /* Bestem størrelsen på billederne */
+        width: 800px; /* Bestem størrelsen på billederne */
         height: auto; /* Behold billedets proportioner */
         border-radius: 8px; /* Tilføj evt. afrundede hjørner */
     }
 
     .image-strip .intro {
         text-align: center;
-        font-weight: normal;
+        font-weight: bold;
         font-size: medium;
         margin: 0 auto 10px;
-        max-width: 600px;
+        max-width: 800px;
         width: 100%;
         overflow-wrap: break-word;
         word-break: break-word;
@@ -145,7 +145,7 @@ footer {
         font-weight: normal;
         font-size: smaller;
         margin: 0 auto 10px;
-        max-width: 600px;
+        max-width: 800px;
         width: 100%;
         overflow-wrap: break-word;
         word-break: break-word;
@@ -173,7 +173,8 @@ footer {
         .image-strip .apartment .guests {
             text-align: left;
             font-weight: normal;
-            font-size: small;
+            font-style: italic;
+            font-size: x-small;
             margin-top: 0px;
             margin-bottom: 10px;
         }
