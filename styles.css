@@ -128,11 +128,61 @@ footer {
         border-radius: 8px; /* Tilføj evt. afrundede hjørner */
     }
 
-    .image-strip .apartment img  {
-        width: 200px; /* Bestem størrelsen på billederne */
-        height: auto; /* Behold billedets proportioner */
-        border-radius: 8px; /* Tilføj evt. afrundede hjørner */
+    .image-strip .intro {
+        text-align: center;
+        font-weight: normal;
+        font-size: medium;
+        margin: 0 auto 10px;
+        max-width: 600px;
+        width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
     }
+
+    .image-strip .description {
+        text-align: center;
+        font-weight: normal;
+        font-size: smaller;
+        margin: 0 auto 10px;
+        max-width: 600px;
+        width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+
+    .image-strip .apartment {
+        vertical-align: top;
+    }
+
+        .image-strip .apartment .name {
+            text-align: left;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+
+        .image-strip .apartment .description {
+            text-align: left;
+            font-weight: normal;
+            font-size: small;
+            margin-top: 0px;
+        }
+
+        .image-strip .apartment .guests {
+            text-align: left;
+            font-weight: normal;
+            font-size: small;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .image-strip .apartment img  {
+            width: 200px; /* Bestem størrelsen på billederne */
+            height: auto; /* Behold billedets proportioner */
+            border-radius: 8px; /* Tilføj evt. afrundede hjørner */
+        }
 
 .image-container {
     display: flex; /* Brug flexbox til at oprette to kolonner */
@@ -162,3 +212,4 @@ footer {
         height: 50px; /* Behold billedernes proportioner - så sæt auto*/
         border-radius: 8px; /* Optional: afrund hjørnerne på billederne */
     }
+
