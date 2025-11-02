@@ -180,7 +180,7 @@ footer {
         }
 
         .image-strip .apartment img  {
-            width: 200px; /* Bestem størrelsen på billederne */
+            width: 300px; /* Bestem størrelsen på billederne */
             height: auto; /* Behold billedets proportioner */
             border-radius: 8px; /* Tilføj evt. afrundede hjørner */
         }
