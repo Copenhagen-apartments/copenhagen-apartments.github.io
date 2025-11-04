@@ -179,11 +179,86 @@ footer {
             margin-bottom: 10px;
         }
 
+        .image-strip .apartment .price {
+            text-align: left;
+            font-weight: normal;
+            font-style: italic;
+            font-size: x-small;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
         .image-strip .apartment img  {
             width: 300px; /* Bestem størrelsen på billederne */
             height: auto; /* Behold billedets proportioner */
             border-radius: 8px; /* Tilføj evt. afrundede hjørner */
         }
+
+
+.apartment-strip {
+    display: flex; /* Brug flexbox for at lave en vandret stribe */
+    flex-direction: column; /* Juster billederne til at være i en kolonne */
+    align-items: center; /* Juster billederne horisontalt, hvis du vil have dem centreret */
+    gap: 5px; /* Afstand mellem billeder */
+    padding: 10px;
+}
+
+    .apartment-strip img {
+        width: 800px; /* Bestem størrelsen på billederne */
+        height: auto; /* Behold billedets proportioner */
+        border-radius: 8px; /* Tilføj evt. afrundede hjørner */
+    }
+
+
+    .apartment-strip .apartment {
+        vertical-align: top;
+    }
+
+        .apartment-strip .apartment .name {
+            text-align: left;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+
+        .apartment-strip .apartment .description {
+            text-align: left;
+            font-weight: normal;
+            font-size: small;
+            margin-top: 0px;
+        }
+
+        .apartment-strip .apartment .guests {
+            text-align: left;
+            font-weight: normal;
+            font-style: italic;
+            font-size: x-small;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .apartment-strip .apartment .price {
+            text-align: left;
+            font-weight: normal;
+            font-style: italic;
+            font-size: x-small;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .apartment-strip .apartment .facility {
+            text-align: left;
+            font-weight: normal;
+            font-size: small;
+            margin-top: 0px;
+        }
+
+        .apartment-strip .apartment img {
+            width: 400px; /* Bestem størrelsen på billederne */
+            height: auto; /* Behold billedets proportioner */
+            border-radius: 8px; /* Tilføj evt. afrundede hjørner */
+        }
+
+
 
 .image-container {
     display: flex; /* Brug flexbox til at oprette to kolonner */

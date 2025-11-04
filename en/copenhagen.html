@@ -6,6 +6,39 @@
     <link rel="stylesheet" href="./../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="./../script_images.js"></script>
+    <script>
+        function navigatePictures(apartmentName, forward, defaultPictureIndex) {
+            const apartment = document.getElementById("pictures_" + apartmentName);
+
+            const pictures = apartment.querySelectorAll("img");
+
+            let pictureIndex = defaultPictureIndex;
+
+            pictures.forEach((img, index) => {
+                if (!img.hidden) {
+                    pictureIndex = index;
+                }
+            });
+
+            //Skjul alle billeder
+            pictures.forEach(img => img.hidden = true);
+
+            if (forward) {
+                pictureIndex++;
+                if (pictureIndex >= pictures.length) {
+                    pictureIndex = 0; //Gå til første billede hvis vi er ved slutningen
+                }
+            } else {
+                pictureIndex--;
+                if (pictureIndex < 0) {
+                    pictureIndex = pictures.length - 1; //Gå til sidste billede hvis vi er ved starten
+                }
+            }
+            //vis det næste eller forrige billede
+            pictures[pictureIndex].hidden = false;
+        }
+    </script>
+
 </head>
 <body>
     <header>
@@ -14,6 +47,7 @@
         <div class="language">
             <a href="./../ru/index.html"><img src="./../images/russianflag.jpg" widh="16" height="16" title="Русский"> Русский</a>
         </div>
+
     </header>
 
     <nav>
@@ -23,44 +57,104 @@
 
     <div class="container">
         <div class="content">
-            <div class="image-container">
-                <div class="row">
-                    <div class="column">
-                        <p>Apartment 1</p>
-                        <div>Located on 2nd floor with a master bedroom, a second bedroom with single bed and a sofabed, and combined kitchen and livingroom and a bathroom.<br />There is room for 4 guests</div>
-                    </div>
-                    <img src="./../images/1/master-bedroom.jpg" alt="Master bedroom" title="Master bedroom" class="clickable-image">
-                    <img src="./../images/1/master-bedroom-2.jpg" alt="Master bedroom" title="Master bedroom" class="clickable-image">
-                    <img src="./../images/1/second-bedroom.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image">
-                    <img src="./../images/1/entrance.jpg" alt="Entrance" title="Entrance" class="clickable-image">
-                    <img src="./../images/1/kitchen-living-room.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/1/kitchen-living-room-2.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/1/kitchen-living-room-3.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/1/kitchen-living-room-4.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/1/kitchen-living-room-5.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/1/bathroom.jpg" alt="Bathroom" title="Bathroom" class="clickable-image">
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="apartment-strip">
+                <div class="apartment">
+                    <table width="800px" align="center">
+                        <tr>
+                            <td id="pictures_apartment1">
+                                <a id="apartment1" />
+                                <img src="./../images/1/master-bedroom.jpg" alt="Master bedroom" title="Master bedroom" class="clickable-image" hidden>
+                                <img src="./../images/1/master-bedroom-2.jpg" alt="Master bedroom" title="Master bedroom" class="clickable-image" hidden>
+                                <img src="./../images/1/second-bedroom.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image" hidden>
+                                <img src="./../images/1/entrance.jpg" alt="Entrance" title="Entrance" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room-2.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room-3.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room-4.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room-5.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
+                                <img src="./../images/1/bathroom.jpg" alt="Bathroom" title="Bathroom" class="clickable-image" hidden>
+                                <a href="#apartment1" onclick="navigatePictures('apartment1', false, 8)">Previous</a> <a  href="#apartment1" onclick="navigatePictures('apartment1', true, 8)">Next</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <div class="name">
+                                    Apartment 1 <a href="https://wa.me/34641836291?text=Apartment%201" target="_blank" aria-label="Contact me on WhatsApp" title="Contact me on WhatsApp">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </div>
 
-    <div class="container">
-        <div class="content">
-            <div class="image-container">
-                <div class="row">
-                    <p>Apartment 2</p>
-                    <div>Located on 3rd floor with a master bedroom, a second bedroom with bed that can be made to a double bed and combined kitchen and livingroom and a bathroom<br />There is room for 4 guests</div>
-                    <img src="./../images/2/master-bedroom.jpg" alt="Master bedroom" title="Master bedroom" class="clickable-image">
-                    <img src="./../images/2/second-bedroom.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image">
-                    <img src="./../images/2/second-bedroom-2.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image">
-                    <img src="./../images/2/second-bedroom-3.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image">
-                    <img src="./../images/2/entrance.jpg" alt="Entrance" title="Entrance" class="clickable-image">
-                    <img src="./../images/2/entrance-2.jpg" alt="Entrance" title="Entrance" class="clickable-image">
-                    <img src="./../images/2/entrance-3.jpg" alt="Entrance" title="Entrance" class="clickable-image">
-                    <img src="./../images/2/kitchen-living-room.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/2/kitchen-living-room-2.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/2/kitchen-living-room-3.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
-                    <img src="./../images/2/bathroom.jpg" alt="Bathroom" title="Bathroom" class="clickable-image">
+                                <div class="guests">Room for 4 guests</div>
+                                <div class="price">Price between 250 and 500 Euro per week</div>
+                                <div class="facility">Apartment with own entrance</div>
+                                <div class="description">
+                                    Located on 2nd floor with master bedroom, second bedroom, toilet/bathroom and a combined kitchen and livingroom.
+                                </div>
+                                <br/>
+
+                                <div class="facility">Full batchroom with shower, sink and toilet</div>
+                                <div class="facility">
+                                    Bathroom Essentials: Hair dryer, iron, towels, bed linens, soap, shampoo and toilet paper
+                                </div>
+                                <div class="facility">Full kitchen with Stove, Oven, Sink, Refrigerator, Freezer, Electric kettle and Nespresso coffee maker</div>
+                                <div class="facility">
+                                    Kitchen essentials: Pots and pans, oil, salt, pepper, plates, bowls, cups, cutlery, wine glasses and other kitchen utensils
+                                </div>
+                                <div class="facility">Kitchen dining table for four persons</div>
+
+                                <div class="facility">Master bedroom with 160x200cm double bed and Egyptian cotton linnen</div>
+                                <div class="facility">Extra bedroom with 80x200cm sofa that can be made to a 160x200cm bed and Egyptian cotton linnen.</div>
+                                <div class="facility">Other essentials: Free Wi-Fi, 32" "HD TV with Chromecast (and a few Danish channels). Combined washing and dryer </div>
+                            </td>
+                        </tr>
+                        <tr><td><br /></tr>
+                        <tr>
+                            <td id="pictures_apartment2">
+                                <a id="apartment2" />
+                                <img src="./../images/2/master-bedroom.jpg" alt="Master bedroom" title="Master bedroom" class="clickable-image" hidden>
+                                <img src="./../images/2/second-bedroom.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image" hidden>
+                                <img src="./../images/2/second-bedroom-2.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image" hidden>
+                                <img src="./../images/2/second-bedroom-3.jpg" alt="Second bedroom" title="Second bedroom" class="clickable-image" hidden>
+                                <img src="./../images/2/entrance.jpg" alt="Entrance" title="Entrance" class="clickable-image" hidden>
+                                <img src="./../images/2/entrance-2.jpg" alt="Entrance" title="Entrance" class="clickable-image" hidden>
+                                <img src="./../images/2/entrance-3.jpg" alt="Entrance" title="Entrance" class="clickable-image" hidden>
+                                <img src="./../images/2/kitchen-living-room.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image" hidden>
+                                <img src="./../images/2/kitchen-living-room-2.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image">
+                                <img src="./../images/2/kitchen-living-room-3.jpg" alt="Kitchen and livingroom" title="Kitchen and livingroom" class="clickable-image" hidden>
+                                <img src="./../images/2/bathroom.jpg" alt="Bathroom" title="Bathroom" class="clickable-image" hidden>
+                                <a href="#apartment2" onclick="navigatePictures('apartment2', false, 8)">Previous</a> <a href="#apartment2" onclick="navigatePictures('apartment2', true, 8)">Next</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <div class="name">
+                                    Apartment 2 <a href="https://wa.me/34641836291?text=Apartment%202" target="_blank" aria-label="Contact me on WhatsApp" title="Contact me on WhatsApp">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                                <div class="guests">Room for 4 guests</div>
+                                <div class="price">Price between 200 and 400 Euro per week</div>
+                                <div class="facility">Apartment with own entrance</div>
+                                <div class="description">
+                                    Located on 3rd floor with master bedroom, second bedroom, toilet/bathroom, combined kitchen and livingroom
+                                </div>
+                                <br />
+                                <div class="facility">Full batchroom with shower, sink and toilet</div>
+                                <div class="facility">
+                                    Bathroom Essentials: Hair dryer, iron, towels, bed linens, soap, shampoo and toilet paper
+                                </div>
+                                <div class="facility">Full kitchen with Stove, Oven, Sink, Refrigerator, Freezer, Electric kettle, Microwave oven, dishwasher and Nespresso coffee maker</div>
+                                <div class="facility">
+                                    Kitchen essentials: Pots and pans, oil, salt, pepper, plates, bowls, cups, cutlery, wine glasses and other kitchen utensils
+                                </div>
+                                <div class="facility">Kitchen dining table for four persons</div>
+
+                                <div class="facility">Master bedroom with 180x200cm double bed and Egyptian cotton linnen</div>
+                                <div class="facility">Extra bedroom with 90x200cm bed, 120x200cm sofa bed and Egyptian cotton linnen. Writing desk for working</div>
+                                <div class="facility">Other essentials: Free Wi-Fi, 40" "HD TV with Chromecast (and a few Danish channels). Combined washing and dryer </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
