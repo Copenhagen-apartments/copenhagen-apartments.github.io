@@ -6,39 +6,7 @@
     <link rel="stylesheet" href="./../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="./../script_images.js"></script>
-    <script>
-        function navigatePictures(apartmentName, forward, defaultPictureIndex) {
-            const apartment = document.getElementById("pictures_" + apartmentName);
-
-            const pictures = apartment.querySelectorAll("img");
-
-            let pictureIndex = defaultPictureIndex;
-
-            pictures.forEach((img, index) => {
-                if (!img.hidden) {
-                    pictureIndex = index;
-                }
-            });
-
-            //Skjul alle billeder
-            pictures.forEach(img => img.hidden = true);
-
-            if (forward) {
-                pictureIndex++;
-                if (pictureIndex >= pictures.length) {
-                    pictureIndex = 0; //Gå til første billede hvis vi er ved slutningen
-                }
-            } else {
-                pictureIndex--;
-                if (pictureIndex < 0) {
-                    pictureIndex = pictures.length - 1; //Gå til sidste billede hvis vi er ved starten
-                }
-            }
-            //vis det næste eller forrige billede
-            pictures[pictureIndex].hidden = false;
-        }
-    </script>
-
+    <script src="./../script_images_navigate.js"></script>
 </head>
 <body>
     <header>
@@ -79,32 +47,57 @@
                         <tr>
                             <td valign="top">
                                 <div class="name">
-                                    Apartment 1 <a href="https://wa.me/34641836291?text=Apartment%201" target="_blank" aria-label="Contact me on WhatsApp" title="Contact me on WhatsApp">
-                                        <i class="fa-brands fa-whatsapp"></i>
+                                    Apartment Maria <a href="https://wa.me/34641836291?text=Apartment%20Maria" target="_blank" rel="noopener noreferrer" aria-label="Contact me on WhatsApp" title="Contact me on WhatsApp">
+                                        <i class="fa-brands fa-whatsapp" style="font-size:x-large"><div class="whatsapp">Press here for contacting us using WhatsApp</div></i>
                                     </a>
                                 </div>
 
-                                <div class="guests">Room for 4 guests</div>
+                                <div class="guests">Can accommodate 4 guests</div>
                                 <div class="price">Price between 250 and 500 Euro per week</div>
-                                <div class="facility">Apartment with own entrance</div>
+                                <div class="facility">Full apartment with own entrance</div>
                                 <div class="description">
                                     Located on 2nd floor with master bedroom, second bedroom, toilet/bathroom and a combined kitchen and livingroom.
                                 </div>
-                                <br/>
+                                <br />
 
-                                <div class="facility">Full batchroom with shower, sink and toilet</div>
+                                <div class="facility">Full Toilet/bathroom with shower, sink and toilet</div>
                                 <div class="facility">
-                                    Bathroom Essentials: Hair dryer, iron, towels, bed linens, soap, shampoo and toilet paper
+                                    <ul><li>Hair dryer</li><li>iron</li><li>towels</li><li>soap</li><li>shampoo</li><li>toilet paper</li><li>Combined washing and drying machine</li></ul>
                                 </div>
-                                <div class="facility">Full kitchen with Stove, Oven, Sink, Refrigerator, Freezer, Electric kettle and Nespresso coffee maker</div>
+                                <br />
+                                <div class="facility">Full combined kitchen and living area with Stove, Oven, Kitchen sink, Refrigerator, Freezer, Electric kettle and Nespresso coffee maker</div>
                                 <div class="facility">
-                                    Kitchen essentials: Pots and pans, oil, salt, pepper, plates, bowls, cups, cutlery, wine glasses and other kitchen utensils
+                                    <ul>
+                                        <li>Pots and pans</li>
+                                        <li>oil</li>
+                                        <li>Salt and Pepper</li>
+                                        <li>Plates and bowls</li>
+                                        <li>Cups, glasses and wine glasses</li>
+                                        <li>Cutlery</li>
+                                        <li>Other hitchen utensils</li>
+                                    </ul>
                                 </div>
                                 <div class="facility">Kitchen dining table for four persons</div>
-
+                                <div class="facility">Sofa with table and a 32" "HD TV with Chromecast (and a few Danish channels)</div>
+                                <br />
                                 <div class="facility">Master bedroom with 160x200cm double bed and Egyptian cotton linnen</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Dressing table with chair</li>
+                                        <li>Clothes rack</li>
+                                    </ul>
+                                </div>
+                                <br />
                                 <div class="facility">Extra bedroom with 80x200cm sofa that can be made to a 160x200cm bed and Egyptian cotton linnen.</div>
-                                <div class="facility">Other essentials: Free Wi-Fi, 32" "HD TV with Chromecast (and a few Danish channels). Combined washing and dryer </div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Drawer</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Entrance with room for coats</div>
+                                <br />
+                                <div class="facility">Other essentials: Free Wi-Fi</div>
                             </td>
                         </tr>
                         <tr><td><br /></tr>
@@ -128,30 +121,63 @@
                         <tr>
                             <td valign="top">
                                 <div class="name">
-                                    Apartment 2 <a href="https://wa.me/34641836291?text=Apartment%202" target="_blank" aria-label="Contact me on WhatsApp" title="Contact me on WhatsApp">
-                                        <i class="fa-brands fa-whatsapp"></i>
+                                    Apartment Isabella <a href="https://wa.me/34641836291?text=Apartment%20Isabella" target="_blank" rel="noopener noreferrer" aria-label="Contact me on WhatsApp" title="Contact me on WhatsApp">
+                                        <i class="fa-brands fa-whatsapp" style="font-size:x-large"><div class="whatsapp">Press here for contacting us using WhatsApp</div></i>
                                     </a>
                                 </div>
-                                <div class="guests">Room for 4 guests</div>
+                                <div class="guests">Can accommodate 4 guests</div>
                                 <div class="price">Price between 200 and 400 Euro per week</div>
-                                <div class="facility">Apartment with own entrance</div>
+                                <div class="facility">Full apartment with own entrance</div>
                                 <div class="description">
                                     Located on 3rd floor with master bedroom, second bedroom, toilet/bathroom, combined kitchen and livingroom
                                 </div>
                                 <br />
-                                <div class="facility">Full batchroom with shower, sink and toilet</div>
+
+                                <div class="facility">Full Toilet/bathroom with shower, sink and toilet</div>
                                 <div class="facility">
-                                    Bathroom Essentials: Hair dryer, iron, towels, bed linens, soap, shampoo and toilet paper
+                                    <ul>
+                                        <li>Hair dryer</li>
+                                        <li>iron</li>
+                                        <li>towels</li>
+                                        <li>soap</li>
+                                        <li>shampoo</li>
+                                        <li>toilet paper</li>
+                                    </ul>
                                 </div>
-                                <div class="facility">Full kitchen with Stove, Oven, Sink, Refrigerator, Freezer, Electric kettle, Microwave oven, dishwasher and Nespresso coffee maker</div>
+                                <br />
+                                <div class="facility">Full combined kitchen and living area with Stove, Oven, Microvaew oven, Kitchen sink, Refrigerator, Freezer, Electric kettle and Nespresso coffee maker</div>
                                 <div class="facility">
-                                    Kitchen essentials: Pots and pans, oil, salt, pepper, plates, bowls, cups, cutlery, wine glasses and other kitchen utensils
+                                    <ul>
+                                        <li>Pots and pans</li>
+                                        <li>oil</li>
+                                        <li>Salt and Pepper</li>
+                                        <li>Plates and bowls</li>
+                                        <li>Cups, glasses and wine glasses</li>
+                                        <li>Cutlery</li>
+                                        <li>Other hitchen utensils</li>
+                                        <li>Combined washing and drying machine</li>
+                                    </ul>
                                 </div>
                                 <div class="facility">Kitchen dining table for four persons</div>
-
+                                <div class="facility">Sofa with table and a 40" "HD TV with Chromecast (and a few Danish channels)</div>
+                                <br />
                                 <div class="facility">Master bedroom with 180x200cm double bed and Egyptian cotton linnen</div>
-                                <div class="facility">Extra bedroom with 90x200cm bed, 120x200cm sofa bed and Egyptian cotton linnen. Writing desk for working</div>
-                                <div class="facility">Other essentials: Free Wi-Fi, 40" "HD TV with Chromecast (and a few Danish channels). Combined washing and dryer </div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Clothes rack</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Extra bedroom with 90x200cm bed, 120x200cm sofa bed and Egyptian cotton linnen.</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Writing desk for working</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Entrance with room for coats</div>
+                                <br />
+                                <div class="facility">Other essentials: Free Wi-Fi</div>
                             </td>
                         </tr>
                     </table>
@@ -163,7 +189,7 @@
     <a href="https://wa.me/34641836291?text=Hi%20I%20have%20a%20question%20regarding%20your%20apartment"
        class="whatsapp-float"
        target="_blank"
-       aria-label="Chat på WhatsApp">
+       aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 

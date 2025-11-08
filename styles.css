@@ -220,6 +220,15 @@ footer {
             margin-top: 0px;
         }
 
+            .apartment-strip .apartment .name .i {
+                font-size: x-large;
+            }
+
+            .apartment-strip .apartment .name .whatsapp {
+                font-size: xx-small;
+                font-weight: lighter;
+            }
+
         .apartment-strip .apartment .description {
             text-align: left;
             font-weight: normal;
