@@ -259,6 +259,11 @@ footer {
             font-weight: normal;
             font-size: small;
             margin-top: 0px;
+            max-width: 800px;
+            width: 100%;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            hyphens: auto;
         }
 
         .apartment-strip .apartment img {
