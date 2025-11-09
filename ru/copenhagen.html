@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="./../script_images.js"></script>
+    <script src="./../script_images_navigate.js"></script>
 </head>
 <body>
     <header>
@@ -21,42 +22,189 @@
         <a href="./../ru/copenhagen.html" class="currentpage">Квартиры</a>
     </nav>
 
-    <div class="content">
-        <div class="image-container">
-            <div class="column">
-                <p>Квартира 1</p>
-                <img src="./../images/1/master-bedroom.jpg" alt="Главная спальня" title="Главная спальня" class="clickable-image">
-                <img src="./../images/1/master-bedroom-2.jpg" alt="Главная спальня" title="Главная спальня" class="clickable-image">
-                <img src="./../images/1/second-bedroom.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image">
-                <img src="./../images/1/entrance.jpg" alt="Вход" title="Вход" class="clickable-image">
-                <img src="./../images/1/kitchen-living-room.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/1/kitchen-living-room-2.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/1/kitchen-living-room-3.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/1/kitchen-living-room-4.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/1/kitchen-living-room-5.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/1/bathroom.jpg" alt="Ванная комната" title="Ванная комната" class="clickable-image">
-            </div>
-            <div class="column">
-                <p>Квартира 2</p>
-                <img src="./../images/2/master-bedroom.jpg" alt="Главная спальня" title="Главная спальня" class="clickable-image">
-                <img src="./../images/2/second-bedroom.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image">
-                <img src="./../images/2/second-bedroom-2.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image">
-                <img src="./../images/2/second-bedroom-3.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image">
-                <img src="./../images/2/entrance.jpg" alt="Вход" title="Вход" class="clickable-image">
-                <img src="./../images/2/entrance-2.jpg" alt="Вход" title="Вход" class="clickable-image">
-                <img src="./../images/2/entrance-3.jpg" alt="Вход" title="Вход" class="clickable-image">
-                <img src="./../images/2/kitchen-living-room.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/2/kitchen-living-room-2.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/2/kitchen-living-room-3.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
-                <img src="./../images/2/bathroom.jpg" alt="Ванная комната" title="Ванная комната" class="clickable-image">
+
+    <div class="container">
+        <div class="content">
+            <div class="apartment-strip">
+                <div class="apartment">
+                    <table width="800px" align="center">
+                        <tr>
+                            <td id="pictures_apartment1">
+                                <a id="apartment1" />
+                                <div class="name">
+                                    Квартира Maria <a href="https://wa.me/34641836291?text=Апартаменты%20Maria" target="_blank" rel="noopener noreferrer" aria-label="Связаться со мной в WhatsApp" title="Связаться со мной в WhatsApp">
+                                        <i class="fa-brands fa-whatsapp" style="font-size:x-large"><div class="whatsapp">Нажмите здесь, чтобы задать вопросы или забронировать через WhatsApp</div></i>
+                                    </a>
+                                </div>
+                                <div class="guests">Вмещает до 4 гостей</div>
+                                <div class="price">Цена от 250 евро в день</div>
+
+                                <br />
+                                <a href="#" onclick="event.preventDefault();navigatePictures('apartment1', false, 8)">Назад</a>
+                                <img src="./../images/1/master-bedroom.jpg" alt="Главная спальня" title="Главная спальня" class="clickable-image" hidden>
+                                <img src="./../images/1/master-bedroom-2.jpg" alt="Главная спальня" title="Главная спальня" class="clickable-image" hidden>
+                                <img src="./../images/1/second-bedroom.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image" hidden>
+                                <img src="./../images/1/entrance.jpg" alt="Вход" title="Вход" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room-2.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room-3.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image" hidden>
+                                <img src="./../images/1/kitchen-living-room-4.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
+                                <img src="./../images/1/kitchen-living-room-5.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image" hidden>
+                                <img src="./../images/1/bathroom.jpg" alt="Ванная комната" title="Ванная комната" class="clickable-image" hidden>
+                                <a href="#" onclick="event.preventDefault();navigatePictures('apartment1', true, 8)">Далее</a>
+                                <br /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <div class="facility">Полностью отдельная квартира с собственным входом</div>
+                                <div class="description">
+                                    Находится на 2-м этаже и включает главную спальню, вторую спальню, туалет/ванную комнату и совмещённую кухню-гостиную.
+                                </div>
+                                <br />
+
+                                <div class="facility">Полная ванная комната с душем, раковиной и туалетом</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Фен</li>
+                                        <li>Утюг</li>
+                                        <li>Полотенца</li>
+                                        <li>Мыло</li>
+                                        <li>Шампунь</li>
+                                        <li>Туалетная бумага</li>
+                                        <li>Стирально-сушильная машина</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Полностью оборудованная кухня-гостиная с плитой, духовкой, кухонной раковиной, холодильником, морозильником, электрическим чайником и кофемашиной Nespresso</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Кастрюли и сковородки</li>
+                                        <li>Соль и перец</li>
+                                        <li>Тарелки и миски</li>
+                                        <li>Кружки, стаканы и бокалы для вина</li>
+                                        <li>Столовые приборы</li>
+                                        <li>Другие кухонные принадлежности</li>
+                                    </ul>
+                                </div>
+                                <div class="facility">Обеденный стол на четыре человека</div>
+                                <div class="facility">Диван со столиком и 32" HD телевизором с Chromecast (и несколькими датскими каналами)</div>
+                                <br />
+                                <div class="facility">Главная спальня с двуспальной кроватью 160x200 см и постельным бельём из египетского хлопка</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Туалетный столик со стулом</li>
+                                        <li>Вешалка для одежды</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Дополнительная спальня с диваном 80x200 см, который можно разложить в кровать 160x200 см, и постельным бельём из египетского хлопка</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Комод</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Прихожая с местом для верхней одежды</div>
+                                <br />
+                                <div class="facility">Другие удобства: бесплатный Wi-Fi</div>
+                            </td>
+                        </tr>
+                        <tr><td><br /><br /></td></tr>
+                        <tr>
+                            <td id="pictures_apartment2">
+                                <a id="apartment2" />
+                                <div class="name">
+                                    Апартаменты Isabella
+                                    <a href="https://wa.me/34641836291?text=Апартаменты%20Isabella" target="_blank" rel="noopener noreferrer" aria-label="Связаться со мной в WhatsApp" title="Связаться со мной в WhatsApp">
+                                        <i class="fa-brands fa-whatsapp" style="font-size:x-large">
+                                            <div class="whatsapp">Нажмите здесь, чтобы задать вопросы или забронировать через WhatsApp</div>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="guests">Вмещает до 4 гостей</div>
+                                <div class="price">Цена от 200 евро в день</div>
+                                <br />
+                                <a href="#" onclick="event.preventDefault();navigatePictures('apartment2', false, 8)">Назад</a>
+                                <img src="./../images/2/master-bedroom.jpg" alt="Главная спальня" title="Главная спальня" class="clickable-image" hidden>
+                                <img src="./../images/2/second-bedroom.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image" hidden>
+                                <img src="./../images/2/second-bedroom-2.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image" hidden>
+                                <img src="./../images/2/second-bedroom-3.jpg" alt="Вторая спальня" title="Вторая спальня" class="clickable-image" hidden>
+                                <img src="./../images/2/entrance.jpg" alt="Вход" title="Вход" class="clickable-image" hidden>
+                                <img src="./../images/2/entrance-2.jpg" alt="Вход" title="Вход" class="clickable-image" hidden>
+                                <img src="./../images/2/entrance-3.jpg" alt="Вход" title="Вход" class="clickable-image" hidden>
+                                <img src="./../images/2/kitchen-living-room.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image">
+                                <img src="./../images/2/kitchen-living-room-2.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image" hidden>
+                                <img src="./../images/2/kitchen-living-room-3.jpg" alt="Кухня и гостиная" title="Кухня и гостиная" class="clickable-image" hidden>
+                                <img src="./../images/2/bathroom.jpg" alt="Ванная комната" title="Ванная комната" class="clickable-image" hidden>
+                                <a href="#" onclick="event.preventDefault();navigatePictures('apartment2', true, 8)">Далее</a>
+                                <br /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <div class="facility">Полностью отдельная квартира с собственным входом</div>
+                                <div class="description">
+                                    Находится на 3-м этаже и включает главную спальню, вторую спальню, туалет/ванную комнату, совмещённую кухню и гостиную.
+                                </div>
+                                <br />
+
+                                <div class="facility">Полная ванная комната с душем, раковиной и туалетом</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Фен</li>
+                                        <li>Утюг</li>
+                                        <li>Полотенца</li>
+                                        <li>Мыло</li>
+                                        <li>Шампунь</li>
+                                        <li>Туалетная бумага</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Полностью оборудованная кухня-гостиная с плитой, духовкой, микроволновой печью, кухонной раковиной, холодильником, морозильником, электрическим чайником и кофемашиной Nespresso</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Кастрюли и сковородки</li>
+                                        <li>Соль и перец</li>
+                                        <li>Тарелки и миски</li>
+                                        <li>Кружки, стаканы и бокалы для вина</li>
+                                        <li>Столовые приборы</li>
+                                        <li>Другие кухонные принадлежности</li>
+                                        <li>Стирально-сушильная машина</li>
+                                    </ul>
+                                </div>
+                                <div class="facility">Обеденный стол на четыре человека</div>
+                                <div class="facility">Диван со столиком и 40" HD телевизором с Chromecast (и несколькими датскими каналами)</div>
+                                <br />
+                                <div class="facility">Главная спальня с двуспальной кроватью 180x200 см и постельным бельём из египетского хлопка</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Вешалка для одежды</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Дополнительная спальня с кроватью 90x200 см, диваном-кроватью 120x200 см и постельным бельём из египетского хлопка</div>
+                                <div class="facility">
+                                    <ul>
+                                        <li>Письменный стол для работы</li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="facility">Прихожая с местом для верхней одежды</div>
+                                <br />
+                                <div class="facility">Другие удобства: бесплатный Wi-Fi</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 
-    <a href="https://wa.me/34641836291?text=Hi%20I%20have%20a%20question%20regarding%20your%20apartment"
+    <a href="https://wa.me/34641836291?text=Привет,%20у%20меня%20есть%20вопрос%20по%20поводу%20вашей%20квартиры"
        class="whatsapp-float"
        target="_blank"
-       aria-label="Chat på WhatsApp">
+       aria-label="Напишите нам в WhatsApp" title="Напишите нам в WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
